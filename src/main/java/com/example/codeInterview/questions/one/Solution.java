@@ -28,13 +28,11 @@ public class Solution {
               }
           }
 
-          if(targetString.equals(binary1)){
-              if(nextValue> value){
-                  value =nextValue;
+          if(targetString.equals(binary1) & nextValue > value){
+                  value = nextValue;
                   if (iterator.hasNext()){
                       nextValue = 0;
                   }
-              }
           }
       }
 
