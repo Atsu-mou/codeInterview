@@ -1,6 +1,7 @@
 package com.example.codeInterview;
 
 import com.example.codeInterview.questions.one.Solution;
+import com.example.codeInterview.questions.three.Solution3;
 import com.example.codeInterview.questions.two.Solution2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,8 +13,8 @@ public class CodeInterviewApplication {
 		SpringApplication.run(CodeInterviewApplication.class, args);
 
 		//Question1
-		Solution solution = new Solution();
-		solution.solution(647);
+		Solution solution1 = new Solution();
+		solution1.solution(647);
 
 		//Question2
 		int[] someInts = {1,2,3,4,5,6};
@@ -24,6 +25,14 @@ public class CodeInterviewApplication {
 		int[] someInts1 = {9,3,9,3,9,7,9};
 		solution2.solution1(someInts1);
 		System.out.println(solution2.solution1(someInts1));
+
+		//Question 3
+		Solution3 solution3 = new Solution3();
+		int answer3 = solution3.solution(10,85,30);
+		System.out.println(answer3);
+
+		int[] someInts3 = {1,2,3,4,6};
+		solution3.solution1(someInts3);
 
 	}
 
