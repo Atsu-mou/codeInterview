@@ -53,35 +53,48 @@ public class Solution4 {
     };
 
     public int[] solution3(int N,int[] A){
+        int maxCount = N + 1;
 
-        int[] answer = new int[N];
-        System.out.println(Arrays.toString(answer));
-        int count = 0;
-        int maxNum = 0;
+        int[] answerArray = new int[N];
+        for(int eachAInt : A){
 
-//配列を分ける
-        for(int arrayNum : A){
-            //配列の中が+1か確かめる
-            System.out.println("array num "+arrayNum);
-            if(arrayNum <= N && 1 <= arrayNum){
-                //answer numの array numの数値の場所を1増やす
-                int addNum = answer[arrayNum -1];
-                answer[arrayNum -1] = addNum + 1;
-                System.out.println(Arrays.toString(answer));
-            }if (arrayNum == N+ 1){
-            for (int answerInt :answer){
-                //最大数　に合わせる
-                if (maxNum < answerInt){
-                    maxNum = answerInt;
-                    for (int countNum = 0; A.length <= countNum; countNum++){
-                        answer[countNum] = maxNum;
-                        System.out.println(Arrays.toString(answer));
-                    }
-                }
+            //boolean for set as max
+            if (eachAInt == maxCount){
+                answerArray = adjustAsMax(answerArray);
             }
+            //if 1 ≤ X ≤ N as 1 to target
+            if(1 <= eachAInt && eachAInt <= N){
+                int addNum = answerArray[eachAInt - 1];
+                answerArray[eachAInt - 1] = addNum +1;
+                System.out.println(Arrays.toString(answerArray));
+            }
+
+        }
+        System.out.println(Arrays.toString(answerArray));
+        return answerArray;
+    };
+
+    public int[] adjustAsMax(int[] answerArray){
+        int maxIntA = 0;
+
+
+        //Maxを取得する
+        for(int eachAIntForMax : answerArray){
+            if (eachAIntForMax > maxIntA){
+                maxIntA = eachAIntForMax;
             }
         }
-        System.out.println(Arrays.toString(answer));
-        return answer;
+        //Maxを代入する
+        for (int count = 0; answerArray.length -1 >= count; count++){
+            System.out.println("Max as " + maxIntA);
+
+            answerArray[count] = maxIntA;
+            System.out.println(Arrays.toString(answerArray));
+        }
+        return answerArray;
+    }
+
+    public int solution4(int[] A){
+        return 1;
     };
 }
