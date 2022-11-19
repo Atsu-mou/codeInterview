@@ -24,6 +24,7 @@ public class Solution3 {
         return countJump;
     }
 
+
     public int solution1(int[] A){
         for(int num = 1; 100000 >= num; num++){
             int finalNum = num;
@@ -37,30 +38,49 @@ public class Solution3 {
 
     public int solution2(int[] A){
 
-        int submitNum = 0;
-        int addNum = 0;
-        //配列のなかを半分に分けて、前半-後半した時に一番少ない整数になった数字を返しなさい
-        //全部足して、その半分を出す
-        //半分を超えた時に、一個前と一個あとを比較
+        int inputNumber = 0;
+        int answerNumber = 100;
 
-        //+1 は配列の数はround robin
-        //一つずつ確認
-        //合計四つの場合、一つめと、他の三つ　→二つ目と他二つ　→
-        //
-        int arrayCount = (int) Arrays.stream(A).count();
-
-        //int[] someInts4 = {3,1,2,4,3} 0 1234
-
-        for(int someNum = 0; arrayCount >= someNum; someNum++){
-            int fistHalf = 0;
-
-
-            fistHalf = A[someNum];
-
-
+        for (int countNum = 0; countNum < A.length; countNum++){
+            inputNumber = getDiff(A,countNum);
+            System.out.println("inputnumber is "+ inputNumber);
+            if (inputNumber < answerNumber){
+                answerNumber = inputNumber;
+            }
         }
-        System.out.println(submitNum + " submit num");
 
-        return submitNum;
+        System.out.println(answerNumber);
+        return answerNumber;
+    }
+
+    public int getDiff(int A[], int index){
+
+        int firstHalf = 0;
+        int secondeHalf = 0;
+        int diffNum = 0;
+        int countFirstLoop = 0;
+        //1 to 0
+        // for true -> false
+        System.out.println(index + " is the index");
+        for (int countNum = index; -1 < countNum; countNum--){
+
+            firstHalf = firstHalf + A[countNum];
+            System.out.println("Firsthalf "+firstHalf);
+            countFirstLoop++;
+        }
+
+            //2 to 4
+        for (int countNumSecond = A.length - countFirstLoop ; A.length > countNumSecond; countNumSecond++){
+            secondeHalf = ++A[countNumSecond ];
+            System.out.println(secondeHalf+" Second half");
+        }
+        diffNum = firstHalf - secondeHalf;
+
+        if (diffNum < 0){
+            return Math.abs(diffNum);
+        }
+
+        System.out.println(diffNum);
+        return diffNum;
     }
 }

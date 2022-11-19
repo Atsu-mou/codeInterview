@@ -13,42 +13,43 @@ public class CodeInterviewApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CodeInterviewApplication.class, args);
 
-		//Question1
-		Solution solution1 = new Solution();
-		solution1.solution(647);
-
-		//Question2
-		int[] someInts = {1,2,3,4,5,6};
-
-		Solution2 solution2 = new Solution2();
-		solution2.solution(someInts, 190000);
-
-		int[] someInts1 = {9,3,9,3,9,7,9};
-		solution2.solution1(someInts1);
-		System.out.println(solution2.solution1(someInts1));
+//		//Question1
+//		Solution solution1 = new Solution();
+//		solution1.solution(647);
+//
+//		//Question2
+//		int[] someInts = {1,2,3,4,5,6};
+//
+//		Solution2 solution2 = new Solution2();
+//		solution2.solution(someInts, 190000);
+//
+//		int[] someInts1 = {9,3,9,3,9,7,9};
+//		solution2.solution1(someInts1);
+//		System.out.println(solution2.solution1(someInts1));
 
 		//Question 3
 		Solution3 solution3 = new Solution3();
-		int answer3 = solution3.solution(10,85,30);
-		System.out.println(answer3);
-
-		int[] someInts3 = {1,2,3,4,6};
-		solution3.solution1(someInts3);
+//		int answer3 = solution3.solution(10,85,30);
+//		System.out.println(answer3);
+//
+//		int[] someInts3 = {1,2,3,4,6};
+//		solution3.solution1(someInts3);
 
 		int[] someInts4 = {3,1,2,4,3};
 		solution3.solution2(someInts4);
 
-		//Question 4
-		int[] someInts5 = {1,3,1,4,2,3,5,4};
-		Solution4 solution4 = new Solution4();
-		solution4.solution(5,someInts5);
 
-		int [] someInts6 = {4,1,3,2,5};
-		int answer = solution4.solution2(someInts6);
-		System.out.println(answer);
-
-		int [] someInts7 = {3,4,4,6,1,4,4};
-		solution4.solution3(5,someInts7);
+//		//Question 4
+//		int[] someInts5 = {1,3,1,4,2,3,5,4};
+//		Solution4 solution4 = new Solution4();
+//		solution4.solution(5,someInts5);
+//
+//		int [] someInts6 = {4,1,3,2,5};
+//		int answer = solution4.solution2(someInts6);
+//		System.out.println(answer);
+//
+//		int [] someInts7 = {3,4,4,6,1,4,4};
+//		solution4.solution3(5,someInts7);
 
 
 	}
