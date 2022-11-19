@@ -25,7 +25,7 @@ public class Solution4 {
         }
 
         return -1;
-    };
+    }
 
     public int solution2(int[] A){
 
@@ -50,7 +50,7 @@ public class Solution4 {
             }
         }
         return 0;
-    };
+    }
 
     public int[] solution3(int N,int[] A){
         int maxCount = N + 1;
@@ -72,7 +72,7 @@ public class Solution4 {
         }
         System.out.println(Arrays.toString(answerArray));
         return answerArray;
-    };
+    }
 
     public int[] adjustAsMax(int[] answerArray){
         int maxIntA = 0;
@@ -96,5 +96,5 @@ public class Solution4 {
 
     public int solution4(int[] A){
         return 1;
-    };
+    }
 }

@@ -8,7 +8,7 @@ public class Solution3 {
         int countJump = 0;
         int currentAddNum = X;
 
-        Boolean jumpIsOk = true;
+        boolean jumpIsOk = true;
 
         if (X >= Y){
             return 0;
@@ -28,7 +28,7 @@ public class Solution3 {
     public int solution1(int[] A){
         for(int num = 1; 100000 >= num; num++){
             int finalNum = num;
-            if(!Arrays.stream(A).anyMatch(i -> i == finalNum)){
+            if(Arrays.stream(A).noneMatch(i -> i == finalNum)){
                 System.out.println(num);
                 return num;
             }
@@ -64,13 +64,13 @@ public class Solution3 {
         System.out.println(index + " is the index");
         for (int countNum = index; -1 < countNum; countNum--){
 
-            firstHalf = firstHalf + A[countNum];
+            firstHalf += A[countNum];
             countFirstLoop++;
         }
 
             //2 to 4
         for (int countNumSecond = countFirstLoop ; A.length > countNumSecond; countNumSecond++){
-            secondeHalf = secondeHalf +A[countNumSecond];
+            secondeHalf += A[countNumSecond];
         }
         System.out.println("Firsthalf "+firstHalf);
 

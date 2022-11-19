@@ -27,7 +27,7 @@ public class Solution2 {
         for (Integer keyNum : valueMap.keySet()){
             int secondKeyNumber = 0;
             if(keyNum >= countOfList){
-                int thirdKeyNum = (int) (keyNum - countOfList);
+                int thirdKeyNum = keyNum - countOfList;
                 A[thirdKeyNum] = valueMap.get(keyNum);
             }else {
                 A[keyNum] = valueMap.get(keyNum);
@@ -35,7 +35,8 @@ public class Solution2 {
         }
         System.out.println(Arrays.toString(A));
         return A;
-    };
+    }
+
     public int solution1(int[] A){
         for(int num = 0; num < 10 ;num++){
             int count = 0;

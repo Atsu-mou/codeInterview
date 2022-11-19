@@ -37,5 +37,5 @@ public class Solution {
 
        System.out.println(binary + " is the binary for int "+N + " and the solution Value is " + value);
         return value;
-    };
+    }
 }
