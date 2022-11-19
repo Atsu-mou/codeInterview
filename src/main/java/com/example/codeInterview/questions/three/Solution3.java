@@ -65,15 +65,17 @@ public class Solution3 {
         for (int countNum = index; -1 < countNum; countNum--){
 
             firstHalf = firstHalf + A[countNum];
-            System.out.println("Firsthalf "+firstHalf);
             countFirstLoop++;
         }
 
             //2 to 4
-        for (int countNumSecond = A.length - countFirstLoop ; A.length > countNumSecond; countNumSecond++){
-            secondeHalf = ++A[countNumSecond ];
-            System.out.println(secondeHalf+" Second half");
+        for (int countNumSecond = countFirstLoop ; A.length > countNumSecond; countNumSecond++){
+            secondeHalf = secondeHalf +A[countNumSecond];
         }
+        System.out.println("Firsthalf "+firstHalf);
+
+        System.out.println(secondeHalf+" Second half");
+
         diffNum = firstHalf - secondeHalf;
 
         if (diffNum < 0){
