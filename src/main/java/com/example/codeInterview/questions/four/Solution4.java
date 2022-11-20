@@ -95,6 +95,23 @@ public class Solution4 {
     }
 
     public int solution4(int[] A){
-        return 1;
+        int arrayLength = A.length;
+        for (int count = 1; count <= arrayLength; count++){
+            System.out.println(count+" count num");
+            if (!existInArray(count, A)){
+                return count;
+            }
+        }
+        return A.length + 1;
+    }
+
+    private boolean existInArray(int num, int[] array){
+        //存在しなければ、false, 存在すればtrue
+        for (int eachNum : array){
+            if (num == eachNum){
+                return true;
+            }
+        }
+        return false;
     }
 }

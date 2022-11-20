@@ -2,6 +2,7 @@ package com.example.codeInterview;
 
 import com.example.codeInterview.questions.four.Solution4;
 import com.example.codeInterview.questions.one.Solution;
+import com.example.codeInterview.questions.six.Solution6;
 import com.example.codeInterview.questions.three.Solution3;
 import com.example.codeInterview.questions.two.Solution2;
 import org.springframework.boot.SpringApplication;
@@ -28,20 +29,20 @@ public class CodeInterviewApplication {
 //		System.out.println(solution2.solution1(someInts1));
 
 		//Question 3
-		Solution3 solution3 = new Solution3();
+//		Solution3 solution3 = new Solution3();
 //		int answer3 = solution3.solution(10,85,30);
 //		System.out.println(answer3);
 //
 //		int[] someInts3 = {1,2,3,4,6};
 //		solution3.solution1(someInts3);
-
-		int[] someInts4 = {3,1,2,4,3};
-		solution3.solution2(someInts4);
+//
+//		int[] someInts4 = {3,1,2,4,3};
+//		solution3.solution2(someInts4);
 
 
 //		//Question 4
 //		int[] someInts5 = {1,3,1,4,2,3,5,4};
-//		Solution4 solution4 = new Solution4();
+		Solution4 solution4 = new Solution4();
 //		solution4.solution(5,someInts5);
 //
 //		int [] someInts6 = {4,1,3,2,5};
@@ -51,7 +52,12 @@ public class CodeInterviewApplication {
 //		int [] someInts7 = {3,4,4,6,1,4,4};
 //		solution4.solution3(5,someInts7);
 
+//		int [] someInts8 = {1,3,6,4,1,2};
+//		solution4.solution4(someInts8);
 
+		int[] someInts9 = {2,1,1,2,3,1,4};
+		Solution6 solution6 = new Solution6();
+		solution6.solution(someInts9);
 	}
 
 }
