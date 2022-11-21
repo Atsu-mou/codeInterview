@@ -57,7 +57,14 @@ public class CodeInterviewApplication {
 
 		int[] someInts9 = {2,1,1,2,3,1,4};
 		Solution6 solution6 = new Solution6();
-		solution6.solution(someInts9);
+//		solution6.solution(someInts9);
+//		int[] someInts10 = {-3,1,2,-2,5,6};
+//		solution6.solution1(someInts10);
+
+		int[] someIntts11 = {10,2,5,1,8,20};
+		int[] someIntts12 = {10,50,5,1};
+		System.out.println(solution6.solution2(someIntts11));
+//		solution6.solution2(someIntts11);
 	}
 
 }
