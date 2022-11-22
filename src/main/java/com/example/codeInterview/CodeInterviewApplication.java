@@ -1,7 +1,9 @@
 package com.example.codeInterview;
 
+import com.example.codeInterview.questions.eight.Solution8;
 import com.example.codeInterview.questions.four.Solution4;
 import com.example.codeInterview.questions.one.Solution;
+import com.example.codeInterview.questions.seven.Solution7;
 import com.example.codeInterview.questions.six.Solution6;
 import com.example.codeInterview.questions.three.Solution3;
 import com.example.codeInterview.questions.two.Solution2;
@@ -56,15 +58,22 @@ public class CodeInterviewApplication {
 //		solution4.solution4(someInts8);
 
 		int[] someInts9 = {2,1,1,2,3,1,4};
-		Solution6 solution6 = new Solution6();
+//		Solution6 solution6 = new Solution6();
 //		solution6.solution(someInts9);
 //		int[] someInts10 = {-3,1,2,-2,5,6};
 //		solution6.solution1(someInts10);
-
-		int[] someIntts11 = {10,2,5,1,8,20};
-		int[] someIntts12 = {10,50,5,1};
-		System.out.println(solution6.solution2(someIntts11));
+//
+//		int[] someIntts11 = {10,2,5,1,8,20};
+//		int[] someIntts12 = {10,50,5,1};
+//		System.out.println(solution6.solution2(someIntts11));
 //		solution6.solution2(someIntts11);
+		Solution7 solution7 = new Solution7();
+//		solution7.solution("{[()()]}");
+//		System.out.println(solution7.nesting("(()(())())"));
+
+		int[] someArr = {3,4,3,2,3,-1,3,3};
+		Solution8 solution8 = new Solution8();
+		System.out.println(solution8.solution(someArr));
 	}
 
 }
