@@ -84,7 +84,8 @@ public class CodeInterviewApplication {
 //		System.out.println(solution8.solution(someArr));
 
 		Solution10 solution10 = new Solution10();
-		solution10.countFactor(24);
+//		solution10.countFactor(24);
+		solution10.minPerRec(30);
 	}
 
 }
