@@ -6,6 +6,7 @@ import com.example.codeInterview.questions.nine.Solution9;
 import com.example.codeInterview.questions.one.Solution;
 import com.example.codeInterview.questions.seven.Solution7;
 import com.example.codeInterview.questions.six.Solution6;
+import com.example.codeInterview.questions.ten.Solution10;
 import com.example.codeInterview.questions.three.Solution3;
 import com.example.codeInterview.questions.two.Solution2;
 import org.springframework.boot.SpringApplication;
@@ -74,13 +75,16 @@ public class CodeInterviewApplication {
 //		int[] someFish = {4,3,2,1,5};
 //		int[] someFishs = {0,1,0,0,0};
 //		solution7.fish(someFish,someFishs);
-
-		int[] ints = {23171,21011,21123,21366,21013,21367};
-		Solution9 solution9 = new Solution9();
-		System.out.println(solution9.solution(ints));
+//
+//		int[] ints = {23171,21011,21123,21366,21013,21367};
+//		Solution9 solution9 = new Solution9();
+//		System.out.println(solution9.solution(ints));
 //		int[] someArr = {3,4,3,2,3,-1,3,3};
 //		Solution8 solution8 = new Solution8();
 //		System.out.println(solution8.solution(someArr));
+
+		Solution10 solution10 = new Solution10();
+		solution10.countFactor(24);
 	}
 
 }
