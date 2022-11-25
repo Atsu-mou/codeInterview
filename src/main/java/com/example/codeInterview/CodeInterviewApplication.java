@@ -1,14 +1,6 @@
 package com.example.codeInterview;
 
-import com.example.codeInterview.questions.eight.Solution8;
-import com.example.codeInterview.questions.four.Solution4;
-import com.example.codeInterview.questions.nine.Solution9;
-import com.example.codeInterview.questions.one.Solution;
-import com.example.codeInterview.questions.seven.Solution7;
-import com.example.codeInterview.questions.six.Solution6;
-import com.example.codeInterview.questions.ten.Solution10;
-import com.example.codeInterview.questions.three.Solution3;
-import com.example.codeInterview.questions.two.Solution2;
+import com.example.codeInterview.questions.fifteen.Solution15;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -69,7 +61,7 @@ public class CodeInterviewApplication {
 //		int[] someIntts12 = {10,50,5,1};
 //		System.out.println(solution6.solution2(someIntts11));
 //		solution6.solution2(someIntts11);
-		Solution7 solution7 = new Solution7();
+//		Solution7 solution7 = new Solution7();
 //		solution7.solution("{[()()]}");
 //		System.out.println(solution7.nesting("(()(())())"));
 //		int[] someFish = {4,3,2,1,5};
@@ -83,9 +75,20 @@ public class CodeInterviewApplication {
 //		Solution8 solution8 = new Solution8();
 //		System.out.println(solution8.solution(someArr));
 
-		Solution10 solution10 = new Solution10();
+//		Solution10 solution10 = new Solution10();
 //		solution10.countFactor(24);
-		solution10.minPerRec(30);
+//		solution10.minPerRec(30);
+
+//		int[] ints11 = {3,1,2,3,6};
+//		Solution11 solution11 = new Solution11();
+//		solution11.solution(ints11);
+
+//		Solution12 solution12 = new Solution12();
+//		System.out.println(solution12.solution(10,4));
+
+		int[] ints15 = {-5,-3,-1,0,3,6};
+		Solution15 solution15 = new Solution15();
+		solution15.absDistinct(ints15);
 	}
 
 }
