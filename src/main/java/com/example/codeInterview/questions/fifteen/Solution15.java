@@ -17,4 +17,9 @@ public class Solution15 {
         System.out.println(numList.size());
         return numList.size();
     }
+    public int countDistinctSlice(int M, int[] A){
+
+
+        return 1;
+    }
 }
