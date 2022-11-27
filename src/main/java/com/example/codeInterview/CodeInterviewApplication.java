@@ -1,5 +1,6 @@
 package com.example.codeInterview;
 
+import com.example.codeInterview.questions.eight.Solution8;
 import com.example.codeInterview.questions.fifteen.Solution15;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -72,9 +73,12 @@ public class CodeInterviewApplication {
 //		Solution9 solution9 = new Solution9();
 //		System.out.println(solution9.solution(ints));
 //		int[] someArr = {3,4,3,2,3,-1,3,3};
-//		Solution8 solution8 = new Solution8();
+		Solution8 solution8 = new Solution8();
 //		System.out.println(solution8.solution(someArr));
 
+		int[] someints8 = {4,3,4,4,4,2};
+		System.out.println(solution8.equiLeader(someints8));
+//		solution8.equiLeader(someints8);
 //		Solution10 solution10 = new Solution10();
 //		solution10.countFactor(24);
 //		solution10.minPerRec(30);
@@ -86,9 +90,9 @@ public class CodeInterviewApplication {
 //		Solution12 solution12 = new Solution12();
 //		System.out.println(solution12.solution(10,4));
 
-		int[] ints15 = {-5,-3,-1,0,3,6};
-		Solution15 solution15 = new Solution15();
-		solution15.absDistinct(ints15);
+//		int[] ints15 = {-5,-3,-1,0,3,6};
+//		Solution15 solution15 = new Solution15();
+//		solution15.absDistinct(ints15);
 	}
 
 }
