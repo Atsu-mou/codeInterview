@@ -55,12 +55,37 @@ public class Solution9 {
         // 0
         //一個増やして回す
 
+        //左から増やしていく
+        //
         //全体から[0]から一個ずつ減らして回す
-        int [] someInts = {3,2,6,-1,4,5,-1,2};
-        for(int count = 4; count < someInts.length; count++){
+        //
 
+        int backNum = 0;
+        int [] someInts = {3,2,6,-1,4,5,-1,2};
+
+        for(int firstNum = 0; firstNum < someInts.length - 4; firstNum++){
+
+            // + 4から一つずつ増やしていく
+            for (int lastNum = firstNum + 4; lastNum < someInts.length; lastNum++){
+
+                //countとsecondCountは外す
+                //一個ずつずらす
+                for (int middleNum = firstNum + 1; middleNum < lastNum; middleNum++){
+                    int addNum = 0;
+                    for (int checkNum = firstNum; checkNum < lastNum; checkNum++){
+                        if (checkNum != firstNum || checkNum != middleNum || checkNum != lastNum){
+                            addNum += someInts[checkNum];
+                            if (checkNum == lastNum -1 && backNum < addNum){
+                                System.out.println("first num " +firstNum + " mid num " + middleNum + " lastNum " + lastNum);
+                                backNum = addNum;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
-        return 0;
+        System.out.println(backNum);
+        return backNum;
     }
 }
