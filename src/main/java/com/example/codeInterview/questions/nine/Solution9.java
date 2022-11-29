@@ -33,4 +33,34 @@ public class Solution9 {
         }
         return gapNum;
     }
+    public int maxSliceSum(){
+        int[]A = new int[]{3, 2, -6, 4, 0};
+        int secondNum = 0;
+
+        for (int count = 0; count < A.length; count++){
+            int checkInt = A[count];
+
+            for (int secondCount = count +1 ; secondCount < A.length; secondCount++){
+                checkInt += A[secondCount] ;
+                if (secondNum < checkInt){
+                    secondNum = checkInt;
+                }
+            }
+        }
+
+        System.out.println(secondNum);
+        return secondNum;
+    }
+    public int maxDoubleSliceSum(){
+        // 0
+        //一個増やして回す
+
+        //全体から[0]から一個ずつ減らして回す
+        int [] someInts = {3,2,6,-1,4,5,-1,2};
+        for(int count = 4; count < someInts.length; count++){
+
+        }
+
+        return 0;
+    }
 }
