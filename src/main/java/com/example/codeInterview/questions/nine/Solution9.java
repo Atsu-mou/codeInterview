@@ -61,31 +61,44 @@ public class Solution9 {
         //
 
         int backNum = 0;
-        int [] someInts = {3,2,6,-1,4,5,-1,2};
+        int [] A = {3,2,6,-1,4,5,-1,2};
+//
+//        for(int firstNum = 0; firstNum < someInts.length - 4; firstNum++){
+//
+//            // + 4から一つずつ増やしていく
+//            for (int lastNum = firstNum + 3; lastNum < someInts.length; lastNum++){
+//
+//                //countとsecondCountは外す
+//                //一個ずつずらす
+//                for (int middleNum = firstNum + 1; middleNum < lastNum; middleNum++){
+//                    int addNum = 0;
+//                    for (int checkNum = firstNum; checkNum < lastNum; checkNum++){
+//                        if (checkNum != firstNum || checkNum != middleNum || checkNum != lastNum){
+//                            addNum += someInts[checkNum];
+//                            if (checkNum == lastNum -1 && backNum < addNum){
+//                                System.out.println("first num " +firstNum + " mid num " + middleNum + " lastNum " + lastNum);
+//                                backNum = addNum;
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+        //copied for study
+        int[] prevSubSum = new int[A.length];
+        int[] postSubSum = new int[A.length];
 
-        for(int firstNum = 0; firstNum < someInts.length - 4; firstNum++){
-
-            // + 4から一つずつ増やしていく
-            for (int lastNum = firstNum + 4; lastNum < someInts.length; lastNum++){
-
-                //countとsecondCountは外す
-                //一個ずつずらす
-                for (int middleNum = firstNum + 1; middleNum < lastNum; middleNum++){
-                    int addNum = 0;
-                    for (int checkNum = firstNum; checkNum < lastNum; checkNum++){
-                        if (checkNum != firstNum || checkNum != middleNum || checkNum != lastNum){
-                            addNum += someInts[checkNum];
-                            if (checkNum == lastNum -1 && backNum < addNum){
-                                System.out.println("first num " +firstNum + " mid num " + middleNum + " lastNum " + lastNum);
-                                backNum = addNum;
-                            }
-                        }
-                    }
-                }
-            }
+        for (int i = 1; i < A.length - 1; i++) {
+            prevSubSum[i] = Math.max(0, prevSubSum[i - 1] + A[i]);
         }
-
-        System.out.println(backNum);
-        return backNum;
+        for (int i = A.length - 2; i > 0; i--) {
+            postSubSum[i] = Math.max(0, postSubSum[i + 1] + A[i]);
+        }
+        int globalMaxSum = 0;
+        for (int i = 1; i < A.length - 1; i++) {
+            globalMaxSum = Math.max(prevSubSum[i - 1] + postSubSum[i + 1], globalMaxSum);
+        }
+        System.out.println(globalMaxSum);
+        return globalMaxSum;
     }
 }
