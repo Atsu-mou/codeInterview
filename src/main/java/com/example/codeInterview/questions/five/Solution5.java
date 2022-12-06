@@ -55,16 +55,17 @@ public class Solution5 {
             for (int secondCount = firstNum; secondCount <= secondNum; secondCount++){
                 String eachString = arrayString[secondCount];
 
+                System.out.println("each string is "+eachString);
                 if (eachString.equals(a)){
                     backArray[count] = 1;
                 }
                 if (eachString.equals(c)){
-                    if (2 < backArray[count]){
+                    if (2 < backArray[count] || backArray[count] == 0){
                         backArray[count] = 2;
                     }
                 }
                 if (eachString.equals(g)){
-                    if (3 < backArray[count]){
+                    if (3 < backArray[count] || backArray[count] == 0){
                         backArray[count] = 3;
                     }
                 }
