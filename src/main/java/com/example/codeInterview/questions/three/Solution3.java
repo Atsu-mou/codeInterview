@@ -1,4 +1,4 @@
-package com.example.codeInterview.questions.thirteen.three;
+package com.example.codeInterview.questions.three;
 
 import java.util.Arrays;
 

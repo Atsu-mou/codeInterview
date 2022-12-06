@@ -51,6 +51,8 @@ public class Solution9 {
         System.out.println(secondNum);
         return secondNum;
     }
+
+    //still need fix
     public int maxDoubleSliceSum(){
         // 0
         //一個増やして回す

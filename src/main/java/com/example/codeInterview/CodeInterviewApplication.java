@@ -10,7 +10,7 @@ import com.example.codeInterview.questions.one.Solution;
 import com.example.codeInterview.questions.seven.Solution7;
 import com.example.codeInterview.questions.six.Solution6;
 import com.example.codeInterview.questions.ten.Solution10;
-import com.example.codeInterview.questions.thirteen.three.Solution3;
+import com.example.codeInterview.questions.three.Solution3;
 import com.example.codeInterview.questions.twelvle.Solution12;
 import com.example.codeInterview.questions.two.Solution2;
 import org.springframework.boot.SpringApplication;
@@ -21,7 +21,7 @@ public class CodeInterviewApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CodeInterviewApplication.class, args);
-//
+
 //		//Question1
 //		Solution solution1 = new Solution();
 //		solution1.solution(647);
@@ -35,7 +35,7 @@ public class CodeInterviewApplication {
 //		int[] someInts1 = {9,3,9,3,9,7,9};
 //		solution2.solution1(someInts1);
 //		System.out.println(solution2.solution1(someInts1));
-////
+//
 ////		Question 3
 //		Solution3 solution3 = new Solution3();
 //		int answer3 = solution3.solution(10,85,30);
@@ -62,9 +62,14 @@ public class CodeInterviewApplication {
 //		int [] someInts8 = {1,3,6,4,1,2};
 //		solution4.solution4(someInts8);
 //
-//		Solution5 solution5 = new Solution5();
+		Solution5 solution5 = new Solution5();
 //		solution5.passingCars();
 //		System.out.println(solution5.countDiv(6,11,2));
+
+		int [] sampleInt = {2,5,0};
+		int [] testInt = {4,5,6};
+
+		solution5.solution("CAGCCTA",sampleInt,testInt);
 //
 //		int[] someInts9 = {2,1,1,2,3,1,4};
 //		Solution6 solution6 = new Solution6();
@@ -84,10 +89,10 @@ public class CodeInterviewApplication {
 //		solution7.fish(someFish,someFishs);
 //
 //		int[] ints = {23171,21011,21123,21366,21013,21367};
-		Solution9 solution9 = new Solution9();
+//		Solution9 solution9 = new Solution9();
 //		System.out.println(solution9.solution(ints));
 //		solution9.maxSliceSum();
-		solution9.maxDoubleSliceSum();
+//		solution9.maxDoubleSliceSum();
 //		int[] someArr = {3,4,3,2,3,-1,3,3};
 //		Solution8 solution8 = new Solution8();
 //		System.out.println(solution8.solution(someArr));
